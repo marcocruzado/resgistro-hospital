@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <% include header/header%>
+
+
+</head>
+
+<body>
+
+    <% include navegacion/navegacion%>
+
+    <div class="container p-2 col-md-4">
+        
+        <form method="POST" action="/registrar" class="card card-body">
+            <div class="card-header">REGISTRAR PACIENTE</div>
+            <br>
+            <div class="form-group">
+                <input type="text" name="Dni" class="form-control" placeholder="introduce tu dni" autofocus>
+            </div>
+            <div class="form-group">
+                <input type="text" name="Nombre" class="form-control" placeholder="introduce tu Nombre">
+            </div>
+            <div class="form-group">
+                <input type="text" name="ApePat" class="form-control" placeholder=" Apellido paterno">
+            </div>
+            <div class="form-group">
+                <input type="text" name="ApeMat" class="form-control" placeholder=" Apellido Materno">
+            </div>
+            <div class="form-group">
+                <input type="number" name="Edad" class="form-control" placeholder="Tu Edad">
+            </div>
+            <div class="form-group">
+                <input type="text" name="Enfermedad" class="form-control" placeholder="Cual es el Diagnostico">
+            </div>
+            <div class="form-group">
+                <label for="Sexo">Sexo:</label>
+                <input type="text" name="Sexo" class="form-control" placeholder="Masxculino o Femenino">
+            </div>
+            <div class="form-group">
+                <input type="text" name="Distrito" class="form-control" placeholder="Distrito de residencia">
+            </div>
+            <button class="btn btn-success">
+                    registrar
+            </button>
+        </form>
+        
+    </div>
+
+
+
+    <% include footer/footer %>
+</body>
+
+</html>

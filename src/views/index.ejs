@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <% include header/header%>
+
+
+</head>
+
+<body>
+
+    <% include navegacion/navegacion%>
+
+
+  
+
+            <div class="ui cards p-5"> 
+                    <% pacientes.forEach(function(paciente){%>
+                        <section id="galeria">
+
+                                <div class="ui card p-3">
+                     
+                                        <div class="content">
+                                            <img src="http://placeimg.com/640/480/any" class="ui mini right floated image" />
+                                            <div class="header"><%= paciente.Nombre%>-<%= paciente.ApePat%>-<%= paciente.ApeMat%></div>
+                                            <div class="meta"><%= paciente.Dni%>--<%= paciente.Edad%> años--<%= paciente.Sexo%> </div>
+                                            <div class="description">
+                                            <strong>Diagnostico</strong> <br>
+                                            <%= paciente.Enfermedad%> 
+                                            </div>
+                                            <div class="meta"> <%= paciente.Distrito%> </div>
+                                        </div>
+                                        <div class="extra content">
+                                            <div class="ui two buttons">
+                                                <button  class="ui blue basic button"  > Eliminar</button>
+                                            </div>
+                                        </div>
+                        </section>
+                    <% }) %>
+                </div>
+           
+
+        <% include footer/footer %>
+</body>
+
+</html>
